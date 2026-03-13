@@ -1,0 +1,24 @@
+{
+	"name" : "satis/hook",
+	"description" : "The hook processing module from repository management platforms",
+	"type" : "library",
+	"license" : "MIT",
+	"autoload" : {
+		"psr-4" : {
+			"Satis\\Hook\\" : "src/"
+		}
+	},
+	"authors" : [
+		{
+			"name" : "Aleksey Katsef",
+			"email" : "aleksey@katsef.com",
+			"homepage" : "https://katsef.com",
+			"role" : "Developer"
+		}
+	],
+	"minimum-stability" : "dev",
+	"require" : {
+		"php" : ">=8.3",
+		"symfony/process" : "7.4.x-dev"
+	}
+}
