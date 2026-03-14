@@ -1,5 +1,6 @@
 <?php
-namespace Satis\Hook;
+namespace Webazon\SatisHook;
+
 
 class Hook extends Base{
     public $status;
@@ -8,7 +9,7 @@ class Hook extends Base{
     public $get_url;
     public $exception;
     
-    function __construct($get = NULL, $post = NULL,$head = NULL) {
+    function __construct($get = NULL, $post = NULL,$head = NULL,$emulate=false) {
         set_time_limit(300);
         Exception::set_error();
 		
@@ -31,6 +32,27 @@ class Hook extends Base{
                 
             }
             
+            if ($emulate)
+            {
+            $a=explode('|',$emulate);
+            $filename='src/Emulate/'.$a[0].'/'.$a[1].'/body.json';
+            if (file_exists($filename))
+                {
+                $post=file_get_contents($filename);
+                }else
+                {
+                throw new Exception('Failed to open stream: No such file or directory in `'.$filename.'`',0,__FILE__,__LINE__);
+                }
+            $filename='src/Emulate/'.$a[0].'/'.$a[1].'/headers.json';
+            if (file_exists($filename))
+                {
+                $head=file_get_contents($filename);
+                }else
+                {
+                throw new Exception('Failed to open stream: No such file or directory in `'.$filename.'`',0,__FILE__,__LINE__);
+                }
+            }
+        
             if ($this->get_url)
             {
                 $post=[];

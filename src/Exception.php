@@ -1,5 +1,5 @@
 <?php
-namespace Satis\Hook;
+namespace Webazon\SatisHook;
 
 class Exception extends \Exception {
 public function __construct($message, $errorLevel = 0, $errorFile = '', $errorLine = 0) {

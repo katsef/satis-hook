@@ -6,6 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Webazon\\SatisHook\\' => array($baseDir . '/src'),
     'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
-    'Satis\\Hook\\' => array($baseDir . '/src'),
 );

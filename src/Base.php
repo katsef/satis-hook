@@ -1,5 +1,5 @@
 <?php
-namespace Satis\Hook;
+namespace Webazon\SatisHook;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
 

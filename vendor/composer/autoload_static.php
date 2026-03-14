@@ -7,21 +7,24 @@ namespace Composer\Autoload;
 class ComposerStaticInit224ccaeeb79c8bfebca27a8aa4a40ab4
 {
     public static $prefixLengthsPsr4 = array (
+        'W' =>
+        array (
+            'Webazon\\SatisHook\\' => 18,
+        ),
         'S' =>
         array (
             'Symfony\\Component\\Process\\' => 26,
-            'Satis\\Hook\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Webazon\\SatisHook\\' =>
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
         'Symfony\\Component\\Process\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/process',
-        ),
-        'Satis\\Hook\\' =>
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

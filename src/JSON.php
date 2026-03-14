@@ -1,5 +1,5 @@
 <?php
-namespace Satis\Hook;
+namespace Webazon\SatisHook;
 
 
 class JSON
